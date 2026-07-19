@@ -6,7 +6,7 @@
     <title>Nguyễn Ngọc Hà - Góc Nhỏ Kỷ Niệm Học Tập</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Be Vietnam Pro (Hỗ trợ tiếng Việt mượt mà) & Pacifico -->
+    <!-- Google Fonts: Be Vietnam Pro & Pacifico -->
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -50,7 +50,7 @@
             position: relative;
             font-family: 'Be Vietnam Pro', sans-serif;
         }
-        /* Style aligns with the soft glowing stars in the sample images */
+        /* Style matches the glowing neon stars from the sample images */
         .glowing-star {
             filter: drop-shadow(0 0 10px rgba(255, 182, 193, 0.9));
             pointer-events: none;
@@ -94,7 +94,7 @@
     <!-- Sparkle Canvas -->
     <canvas id="sparkle-canvas"></canvas>
 
-    <!-- Star decor -->
+    <!-- Background Star Decor -->
     <div class="absolute top-16 left-8 w-24 h-24 glowing-star animate-float opacity-80">
         <svg viewBox="0 0 24 24" fill="none" class="w-full h-full text-dreamPink-200"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor"/></svg>
     </div>
@@ -138,7 +138,7 @@
                 Chào mọi người nhé! Mình là <strong class="text-dreamPink-500">Nguyễn Ngọc Hà</strong>, một cô gái cực kỳ yêu văn chương và ngôn ngữ, hiện đang theo học tại Khoa Ngôn ngữ và Văn hóa Trung Quốc, Trường Đại học Ngoại ngữ - ĐHQGHN.
                 Trước đây, mình từng nghĩ công nghệ số là một thế giới xa vời và có phần hơi khô khan. Thế nhưng học phần thú vị này đã giúp mình nhận ra một điều rất đẹp: khi công nghệ hiện đại đồng hành cùng ngôn từ mềm mại, chúng ta có thể tạo nên những sản phẩm truyền cảm hứng ngoài mong đợi của chính bản thân mình.
             </p>
-            <div class="pt-2 flex flex-wrap gap-4 text-xs">
+            <div class="pt-2 flex flex-wrap gap-4 text-sm">
                 <a href="#projects" class="bg-gradient-to-r from-dreamPink-400 to-pink-300 text-white font-semibold px-6 py-3 rounded-full hover:shadow-lg hover:scale-105 transition-all shadow-sm flex items-center gap-2">
                     Ghé xem nhật ký bài tập của mình nhé
                     <i data-lucide="arrow-right" class="w-4 h-4"></i>
@@ -181,7 +181,7 @@
                         Nhìn Lại Chặng Đường Đã Qua
                     </h4>
                     <p class="text-gray-500 leading-relaxed text-xs">
-                        Hệ thống hóa toàn bộ các bài viết và sản phẩm của mình suốt học kỳ qua để lưu giữ lại làm kỷ niệm học tập, đồng thời chia sẻ với thầy cô và bạn bè.
+                        Hệ thống hóa toàn bộ các bài viết và sản phẩm của mình suốt học kỳ qua để lưu lại làm kỷ niệm học tập, đồng thời chia sẻ với thầy cô và bạn bè.
                     </p>
                 </div>
                 <div class="bg-white/40 p-5 rounded-2xl border border-pink-100/50 space-y-2">
@@ -199,7 +199,7 @@
                         Định Hình Thói Quen Học Lành Mạnh
                     </h4>
                     <p class="text-gray-500 leading-relaxed text-xs">
-                        Xây dựng một góc nhìn liêm chính trong học tập, biết cách biến AI thành một người bạn đồng hành hữu ích thay vì lạm dụng nó một cách rập khuôn.
+                        Xây dựng một góc nhìn liêm chính trong học tập, biết cách biến AI thành một người bạn đồng hành hữu ích thay vì biến mình thành một bản sao rập khuôn.
                     </p>
                 </div>
             </div>
@@ -211,7 +211,7 @@
         <div class="text-center max-w-xl mx-auto space-y-2">
             <span class="font-cursive text-lg text-dreamPink-400">Trải nghiệm qua từng chặng</span>
             <h2 class="text-2xl md:text-3xl font-bold">Danh Sách 6 Bài Tập Sáng Tạo Cuối Kỳ</h2>
-            <p class="text-gray-500 text-xs">Mỗi bài tập dưới đây đều là kết quả tự tay mình chuẩn bị và tinh chỉnh từ những nét vẽ và dòng chữ thô sơ ban đầu.</p>
+            <p class="text-gray-500 text-xs">Mỗi bài tập dưới đây đều là kết quả tự tay mình chuẩn bị, tinh chỉnh từ những nét vẽ và dòng chữ thô sơ ban đầu.</p>
         </div>
 
         <div class="space-y-20">
@@ -250,17 +250,30 @@
                             <p id="b1-text" class="text-gray-700 leading-relaxed font-medium">Bước 1: Mở File Explorer bằng phím tắt Windows + E hoặc nhấp chuột vào biểu tượng thư mục màu vàng trên màn hình.</p>
                         </div>
 
-                        <!-- Dynamic Directory Tree Visualizer -->
-                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-200/50 font-mono text-[11px] text-gray-600 space-y-1.5 min-h-[140px] flex flex-col justify-center">
-                            <div class="flex items-center gap-1 text-gray-800 font-bold"><i data-lucide="hard-drive" class="w-3.5 h-3.5 text-dreamPink-400"></i> D:\ (Máy tính của mình)</div>
-                            <div class="pl-4 border-l border-dashed border-gray-300 space-y-1" id="tree-root">
-                                <div id="tree-folder-main" class="flex items-center gap-1 font-semibold transition-opacity duration-300 opacity-20"><i data-lucide="folder" class="w-3.5 h-3.5 text-dreamPink-300"></i> ThucHanh_NguyenNgocHa</div>
-                                <div class="pl-4 border-l border-dashed border-gray-300 space-y-1 hidden" id="tree-sub-elements">
-                                    <div id="tree-file-gc" class="flex items-center gap-1 transition-all duration-300 hidden"><i data-lucide="file-text" class="w-3 h-3 text-indigo-300"></i> <span id="tree-file-gc-name">GhiChu.txt</span></div>
-                                    <div id="tree-folder-sub" class="flex items-center gap-1 font-semibold transition-all duration-300 hidden"><i data-lucide="folder" class="w-3.5 h-3.5 text-dreamPink-300"></i> TaiLieu</div>
-                                    <div class="pl-4 border-l border-dashed border-gray-300 space-y-1 hidden" id="tree-sub-sub-elements">
-                                        <div id="tree-file-gc-copy" class="flex items-center gap-1 transition-all duration-300 hidden"><i data-lucide="file-text" class="w-3 h-3 text-indigo-300"></i> GhiChuQuanTrong.txt (Bản sao lưu)</div>
-                                        <div id="tree-file-dc" class="flex items-center gap-1 transition-all duration-300 hidden"><i data-lucide="file-text" class="w-3 h-3 text-indigo-300"></i> DiChuyen.txt</div>
+                        <!-- 12 steps visual simulator columns -->
+                        <div class="grid md:grid-cols-12 gap-4 items-stretch">
+                            <!-- Left Column: Visual Screen representation of Step -->
+                            <div class="md:col-span-6 bg-gray-50 rounded-xl p-3 border border-gray-200/40 flex flex-col justify-center items-center text-center space-y-2 min-h-[140px]" id="step-visual-display">
+                                <!-- This is dynamically updated by JS without crash -->
+                            </div>
+
+                            <!-- Right Column: Live Directory Tree diagram -->
+                            <div class="md:col-span-6 bg-gray-50 rounded-xl p-3 border border-gray-200/40 font-mono text-[10px] text-gray-600 space-y-1 min-h-[140px] flex flex-col justify-center">
+                                <div class="flex items-center gap-1 text-gray-800 font-bold"><i data-lucide="hard-drive" class="w-3 h-3 text-dreamPink-400"></i> D:\ (Máy tính của mình)</div>
+                                <div class="pl-3 border-l border-dashed border-gray-300 space-y-1" id="tree-root">
+                                    <!-- Main Root Folder -->
+                                    <div id="tree-folder-main" class="flex items-center gap-1 font-semibold transition-all duration-300 opacity-20"><i data-lucide="folder" class="w-3 h-3 text-dreamPink-300"></i> ThucHanh_NguyenNgocHa</div>
+                                    
+                                    <!-- Sub Elements -->
+                                    <div class="pl-3 border-l border-dashed border-gray-300 space-y-1 hidden" id="tree-sub-elements">
+                                        <div id="tree-file-gc" class="flex items-center gap-1 transition-all duration-300"><i data-lucide="file-text" class="w-3 h-3 text-indigo-300"></i> <span id="tree-file-gc-name">GhiChu.txt</span></div>
+                                        <div id="tree-folder-sub" class="flex items-center gap-1 font-semibold transition-all duration-300 opacity-20"><i data-lucide="folder" class="w-3 h-3 text-dreamPink-300"></i> TaiLieu</div>
+                                        
+                                        <!-- Sub-Sub Elements inside TaiLieu -->
+                                        <div class="pl-3 border-l border-dashed border-gray-300 space-y-1 hidden" id="tree-sub-sub-elements">
+                                            <div id="tree-file-gc-copy" class="flex items-center gap-1 transition-all duration-300"><i data-lucide="file-text" class="w-3 h-3 text-indigo-300"></i> GhiChuQuanTrong.txt (Bản sao lưu)</div>
+                                            <div id="tree-file-dc" class="flex items-center gap-1 transition-all duration-300"><i data-lucide="file-text" class="w-3 h-3 text-indigo-300"></i> DiChuyen.txt</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -643,7 +656,7 @@
                 <p class="text-gray-500">
                     Trải qua 6 bài tập thực hành lớn, quy trình làm việc của mình đã chuyển đổi từ những nét vẽ đơn điệu thô sơ sang **Vòng lặp tương tác (Iterative Loop)**. 
                     Mình không còn đơn thuần là người trực tiếp gõ từng dòng chữ hay cắt từng đoạn video thô, mà đã chuyển sang vai trò **Biên tập viên kiêm Đạo diễn**. 
-                    Mình học được cách đặt câu hỏi thông minh để điều khiển AI, rà soát kiểm chứng kết quả nghiêm khắc để tránh ảo giác thông tin và tự tay cân chỉnh thủ công tỉ mỉ các chi tiết mỹ thuật. 
+                    Mình học được cách đặt câu hỏi thông minh để điều khiển AI, rà soát kiểm chứng kết quả nghiêm khắc để tránh ảo giác thông tin và tự tay căn chỉnh thủ công tỉ mỉ các chi tiết mỹ thuật. 
                     Năng lực xử lý dữ liệu nhanh chóng của trí tuệ nhân tạo khi kết hợp cùng gu thẩm mỹ, óc phản biện độc lập và trái tim tràn đầy thấu cảm của con người mới thực sự tạo nên những giá trị học thuật hoàn mỹ nhất.
                 </p>
             </div>
@@ -753,128 +766,161 @@
         const b1StepsData = {
             1: {
                 text: "Bước 1: Mở File Explorer bằng phím tắt Windows + E hoặc nhấp chuột vào biểu tượng thư mục màu vàng trên thanh Taskbar nhanh chóng.",
+                treeHighlight: [],
+                treeShowSub: false,
+                treeShowSubSub: false,
+                treeMainFolderOpacity: "opacity-20",
+                treeSubFolderOpacity: "opacity-20",
+                gcText: "GhiChu.txt",
+                showGc: false,
+                showGcCopy: false,
+                showDc: false,
                 visual: '<i data-lucide="monitor" class="w-10 h-10 text-dreamPink-400 mx-auto animate-pulse"></i><p class="font-bold text-gray-800 text-[11px]">Màn hình máy tính</p><p class="text-[10px] text-gray-400">File Explorer sẵn sàng hoạt động</p>'
             },
             2: {
                 text: "Bước 2: Ở cột bên trái giao diện, nhấp chuột chọn This PC, sau đó nhấp đúp vào ổ đĩa D: để mở phân vùng không gian lưu trữ hệ thống.",
+                treeHighlight: [],
+                treeShowSub: false,
+                treeShowSubSub: false,
+                treeMainFolderOpacity: "opacity-20",
+                treeSubFolderOpacity: "opacity-20",
+                gcText: "GhiChu.txt",
+                showGc: false,
+                showGcCopy: false,
+                showDc: false,
                 visual: '<i data-lucide="hard-drive" class="w-10 h-10 text-dreamPink-400 mx-auto animate-bounce"></i><p class="font-bold text-gray-800 text-[11px]">This PC > Ổ đĩa D:</p><p class="text-[10px] text-gray-400">Đã đi vào không gian lưu trữ chính</p>'
             },
             3: {
                 text: "Bước 3: Nhấp chuột phải vào khoảng trống bất kỳ -> chọn New -> Folder. Tiến hành đặt tên cho thư mục mới là ThucHanh_NguyenNgocHa rồi nhấn Enter.",
+                treeHighlight: ["tree-folder-main"],
+                treeShowSub: false,
+                treeShowSubSub: false,
+                treeMainFolderOpacity: "opacity-100",
+                treeSubFolderOpacity: "opacity-20",
+                gcText: "GhiChu.txt",
+                showGc: false,
+                showGcCopy: false,
+                showDc: false,
                 visual: '<i data-lucide="folder-plus" class="w-10 h-10 text-dreamPink-400 mx-auto"></i><p class="font-bold text-gray-800 text-[11px]">[D:\\ThucHanh_NguyenNgocHa]</p><p class="text-[10px] text-gray-400">Tạo thành công thư mục thực hành cá nhân</p>'
             },
             4: {
                 text: "Bước 4: Nhấp đúp chuột vào thư mục ThucHanh_NguyenNgocHa vừa tạo để bắt đầu đi vào bên trong thư mục này.",
+                treeHighlight: ["tree-folder-main"],
+                treeShowSub: true,
+                treeShowSubSub: false,
+                treeMainFolderOpacity: "opacity-100",
+                treeSubFolderOpacity: "opacity-20",
+                gcText: "GhiChu.txt",
+                showGc: false,
+                showGcCopy: false,
+                showDc: false,
                 visual: '<i data-lucide="folder-open" class="w-10 h-10 text-dreamPink-400 mx-auto"></i><p class="font-bold text-gray-800 text-[11px]">Thư mục đang trống</p><p class="text-[10px] text-gray-400">Chuẩn bị khởi tạo tệp tin văn bản</p>'
             },
             5: {
                 text: "Bước 5: Nhấp chuột phải vào khoảng trống bên trong -> chọn New -> Text Document. Đặt tên tệp tin ban đầu là GhiChu.txt rồi nhấn Enter.",
+                treeHighlight: ["tree-file-gc"],
+                treeShowSub: true,
+                treeShowSubSub: false,
+                treeMainFolderOpacity: "opacity-100",
+                treeSubFolderOpacity: "opacity-20",
+                gcText: "GhiChu.txt",
+                showGc: true,
+                showGcCopy: false,
+                showDc: false,
                 visual: '<i data-lucide="file-plus-2" class="w-10 h-10 text-dreamPink-400 mx-auto animate-pulse"></i><p class="font-bold text-gray-800 text-[11px]">GhiChu.txt (0 KB)</p><p class="text-[10px] text-gray-400">Đã khởi tạo tệp tin ghi chú ban đầu</p>'
             },
             6: {
                 text: "Bước 6: Nhấp chuột phải vào tệp GhiChu.txt vừa tạo -> chọn Rename. Đổi tên tệp văn bản thành GhiChuQuanTrong.txt rồi nhấn Enter.",
+                treeHighlight: ["tree-file-gc"],
+                treeShowSub: true,
+                treeShowSubSub: false,
+                treeMainFolderOpacity: "opacity-100",
+                treeSubFolderOpacity: "opacity-20",
+                gcText: "GhiChuQuanTrong.txt",
+                showGc: true,
+                showGcCopy: false,
+                showDc: false,
                 visual: '<i data-lucide="edit-3" class="w-10 h-10 text-dreamPink-400 mx-auto"></i><p class="font-bold text-gray-800 text-[11px]">GhiChuQuanTrong.txt</p><p class="text-[10px] text-gray-400">Đã hoàn thành việc đổi tên tệp</p>'
             },
             7: {
                 text: "Bước 7: Nhấp chuột phải vào khoảng trống bất kỳ -> chọn New -> Folder. Đặt tên cho thư mục con mới này là TaiLieu rồi nhấn Enter.",
+                treeHighlight: ["tree-folder-sub"],
+                treeShowSub: true,
+                treeShowSubSub: false,
+                treeMainFolderOpacity: "opacity-100",
+                treeSubFolderOpacity: "opacity-100",
+                gcText: "GhiChuQuanTrong.txt",
+                showGc: true,
+                showGcCopy: false,
+                showDc: false,
                 visual: '<i data-lucide="folder" class="w-10 h-10 text-dreamPink-400 mx-auto"></i><p class="font-bold text-gray-800 text-[11px]">Đã xuất hiện thư mục con [TaiLieu]</p><p class="text-[10px] text-gray-400">Chuẩn bị chuyển dữ liệu phân vùng</p>'
             },
             8: {
                 text: "Bước 8: Nhấp chuột phải vào tệp GhiChuQuanTrong.txt -> chọn Copy (hoặc dùng phím tắt Ctrl + C). Nhấp đúp mở thư mục con TaiLieu -> nhấp chuột phải -> chọn Paste (Ctrl + V) để tạo bản sao lưu.",
+                treeHighlight: ["tree-file-gc-copy"],
+                treeShowSub: true,
+                treeShowSubSub: true,
+                treeMainFolderOpacity: "opacity-100",
+                treeSubFolderOpacity: "opacity-100",
+                gcText: "GhiChuQuanTrong.txt",
+                showGc: true,
+                showGcCopy: true,
+                showDc: false,
                 visual: '<div class="flex gap-3 justify-center items-center"><i data-lucide="file-text" class="w-6 h-6 text-gray-400"></i><i data-lucide="copy" class="w-5 h-5 text-dreamPink-400 animate-bounce"></i><i data-lucide="folder-open" class="w-8 h-8 text-dreamPink-400"></i></div><p class="font-bold text-gray-800 text-[11px]">TaiLieu\\GhiChuQuanTrong.txt</p><p class="text-[10px] text-gray-400">Bản sao của tệp đã được dán thành công</p>'
             },
             9: {
                 text: "Bước 9: Quay lại thư mục gốc ThucHanh_NguyenNgocHa. Nhấp chuột phải -> New -> Text Document -> đặt tên DiChuyen.txt. Nhấp chuột phải vào tệp mới -> chọn Cut (Ctrl + X). Đi vào thư mục TaiLieu -> Paste (Ctrl + V) để chuyển hẳn tệp.",
+                treeHighlight: ["tree-file-dc"],
+                treeShowSub: true,
+                treeShowSubSub: true,
+                treeMainFolderOpacity: "opacity-100",
+                treeSubFolderOpacity: "opacity-100",
+                gcText: "GhiChuQuanTrong.txt",
+                showGc: true,
+                showGcCopy: true,
+                showDc: true,
                 visual: '<div class="flex gap-3 justify-center items-center"><i data-lucide="file-check-2" class="w-6 h-6 text-gray-400"></i><i data-lucide="scissors" class="w-5 h-5 text-dreamPink-400 animate-pulse"></i><i data-lucide="folder" class="w-8 h-8 text-dreamPink-400"></i></div><p class="font-bold text-gray-800 text-[11px]">Tệp DiChuyen.txt đã di dời</p><p class="text-[10px] text-gray-400">Tệp gốc đã di chuyển hoàn toàn vào thư mục con</p>'
             },
             10: {
                 text: "Bước 10: Đi vào thư mục con TaiLieu, nhấp chuột phải vào tệp sao lưu GhiChuQuanTrong.txt -> chọn Delete (hoặc phím Delete) để chuyển tệp vào Thùng rác (Recycle Bin) tạm thời.",
+                treeHighlight: ["tree-file-gc-copy"],
+                treeShowSub: true,
+                treeShowSubSub: true,
+                treeMainFolderOpacity: "opacity-100",
+                treeSubFolderOpacity: "opacity-100",
+                gcText: "GhiChuQuanTrong.txt",
+                showGc: true,
+                showGcCopy: false,
+                showDc: true,
                 visual: '<i data-lucide="trash-2" class="w-10 h-10 text-dreamPink-400 mx-auto animate-bounce"></i><p class="font-bold text-gray-800 text-[11px]">Xóa GhiChuQuanTrong.txt</p><p class="text-[10px] text-gray-400">Tệp đã bị xóa và nằm tạm trong Thùng rác</p>'
             },
             11: {
                 text: "Bước 11: Nhấp chuột chọn tệp DiChuyen.txt, nhấn giữ tổ hợp phím Shift và nhấn phím Delete. Một cảnh báo hiện ra, nhấp chọn Yes để xóa tệp vĩnh viễn không qua thùng rác.",
+                treeHighlight: ["tree-file-dc"],
+                treeShowSub: true,
+                treeShowSubSub: true,
+                treeMainFolderOpacity: "opacity-100",
+                treeSubFolderOpacity: "opacity-100",
+                gcText: "GhiChuQuanTrong.txt",
+                showGc: true,
+                showGcCopy: false,
+                showDc: false,
                 visual: '<i data-lucide="alert-triangle" class="w-10 h-10 text-red-400 mx-auto animate-pulse"></i><p class="font-bold text-gray-800 text-[11px]">Xóa vĩnh viễn tệp DiChuyen.txt</p><p class="text-[10px] text-red-400">Cảnh báo: Tệp này không thể phục hồi!</p>'
             },
             12: {
                 text: "Bước 12: Quay lại màn hình chính Desktop, nhấp đúp biểu tượng Recycle Bin. Tìm tệp GhiChuQuanTrong.txt đã xóa -> nhấp chuột phải -> chọn Restore để khôi phục tệp về thư mục TaiLieu ban đầu.",
+                treeHighlight: ["tree-file-gc-copy"],
+                treeShowSub: true,
+                treeShowSubSub: true,
+                treeMainFolderOpacity: "opacity-100",
+                treeSubFolderOpacity: "opacity-100",
+                gcText: "GhiChuQuanTrong.txt",
+                showGc: true,
+                showGcCopy: true,
+                showDc: false,
                 visual: '<i data-lucide="rotate-ccw" class="w-10 h-10 text-green-400 mx-auto animate-bounce"></i><p class="font-bold text-gray-800 text-[11px]">Khôi phục thành công!</p><p class="text-[10px] text-gray-400">Tệp tin đã phục hồi về lại vị trí cũ</p>'
             }
         };
-
-        function updateTreeUI(step) {
-            const mainFolder = document.getElementById('tree-folder-main');
-            const subElements = document.getElementById('tree-sub-elements');
-            const fileGc = document.getElementById('tree-file-gc');
-            const fileGcName = document.getElementById('tree-file-gc-name');
-            const folderSub = document.getElementById('tree-folder-sub');
-            const subSubElements = document.getElementById('tree-sub-sub-elements');
-            const fileGcCopy = document.getElementById('tree-file-gc-copy');
-            const fileDc = document.getElementById('tree-file-dc');
-
-            // Reset highlights and styles
-            mainFolder.classList.remove('opacity-20', 'opacity-100', 'bg-pink-100', 'px-1', 'rounded');
-            fileGc.classList.remove('hidden', 'bg-pink-100', 'px-1', 'rounded');
-            folderSub.classList.remove('hidden', 'opacity-20', 'opacity-100', 'bg-pink-100', 'px-1', 'rounded');
-            fileGcCopy.classList.remove('hidden', 'bg-pink-100', 'px-1', 'rounded');
-            fileDc.classList.remove('hidden', 'bg-pink-100', 'px-1', 'rounded');
-
-            // Apply state based on step
-            if (step >= 3) {
-                mainFolder.classList.add('opacity-100');
-            } else {
-                mainFolder.classList.add('opacity-20');
-            }
-
-            if (step >= 4) {
-                subElements.classList.remove('hidden');
-            } else {
-                subElements.classList.add('hidden');
-            }
-
-            if (step >= 5) {
-                fileGc.classList.remove('hidden');
-                if (step === 5) {
-                    fileGcName.textContent = "GhiChu.txt";
-                } else {
-                    fileGcName.textContent = "GhiChuQuanTrong.txt";
-                }
-            } else {
-                fileGc.classList.add('hidden');
-            }
-
-            if (step >= 7) {
-                folderSub.classList.remove('hidden');
-                folderSub.classList.add('opacity-100');
-            } else {
-                folderSub.classList.add('hidden');
-                folderSub.classList.add('opacity-20');
-            }
-
-            if (step >= 8) {
-                subSubElements.classList.remove('hidden');
-            } else {
-                subSubElements.classList.add('hidden');
-            }
-
-            if (step >= 8 && step !== 10 && step !== 11) {
-                fileGcCopy.classList.remove('hidden');
-            } else {
-                fileGcCopy.classList.add('hidden');
-            }
-
-            if (step >= 9 && step !== 11 && step !== 12) {
-                fileDc.classList.remove('hidden');
-            } else {
-                fileDc.classList.add('hidden');
-            }
-
-            // Highlights
-            if (step === 3 || step === 4) mainFolder.classList.add('bg-pink-100', 'px-1', 'rounded');
-            if (step === 5 || step === 6) fileGc.classList.add('bg-pink-100', 'px-1', 'rounded');
-            if (step === 7) folderSub.classList.add('bg-pink-100', 'px-1', 'rounded');
-            if (step === 8 || step === 10 || step === 12) fileGcCopy.classList.add('bg-pink-100', 'px-1', 'rounded');
-            if (step === 9 || step === 11) fileDc.classList.add('bg-pink-100', 'px-1', 'rounded');
-        }
 
         function stepB1(direction) {
             b1CurrentStep += direction;
@@ -888,11 +934,71 @@
             
             document.getElementById('step-visual-display').innerHTML = data.visual;
 
-            // Trigger dynamic Tree visual transitions
-            updateTreeUI(b1CurrentStep);
+            const mainFolder = document.getElementById('tree-folder-main');
+            const subElements = document.getElementById('tree-sub-elements');
+            const subSubElements = document.getElementById('tree-sub-sub-elements');
+            const treeGcFile = document.getElementById('tree-file-gc');
+            const treeGcFileName = document.getElementById('tree-file-gc-name');
+            const treeSubFolder = document.getElementById('tree-folder-sub');
+            const treeGcFileCopy = document.getElementById('tree-file-gc-copy');
+            const treeDcFile = document.getElementById('tree-file-dc');
+
+            // Main folder opacity
+            mainFolder.className = `flex items-center gap-1 font-semibold transition-opacity duration-300 ${data.treeMainFolderOpacity}`;
+
+            // Show sub elements of root folder
+            if (data.treeShowSub) {
+                subElements.classList.remove('hidden');
+            } else {
+                subElements.classList.add('hidden');
+            }
+
+            // GhiChu file visibility & naming
+            if (data.showGc) {
+                treeGcFile.classList.remove('hidden');
+            } else {
+                treeGcFile.classList.add('hidden');
+            }
+            treeGcFileName.textContent = data.gcText;
+
+            // Sub folder (TaiLieu) opacity
+            treeSubFolder.className = `flex items-center gap-1 font-semibold transition-all duration-300 ${data.treeSubFolderOpacity}`;
+
+            // Sub-sub elements visibility
+            if (data.treeShowSubSub) {
+                subSubElements.classList.remove('hidden');
+            } else {
+                subSubElements.classList.add('hidden');
+            }
+
+            // Copy file visibility
+            if (data.showGcCopy) {
+                treeGcFileCopy.classList.remove('hidden');
+            } else {
+                treeGcFileCopy.classList.add('hidden');
+            }
+
+            // DiChuyen file visibility
+            if (data.showDc) {
+                treeDcFile.classList.remove('hidden');
+            } else {
+                treeDcFile.classList.add('hidden');
+            }
+
+            // Reset highlights
+            const allNodes = ["tree-folder-main", "tree-file-gc", "tree-folder-sub", "tree-file-gc-copy", "tree-file-dc"];
+            allNodes.forEach(node => {
+                document.getElementById(node).classList.remove('bg-pink-100', 'px-1.5', 'rounded-md', 'border', 'border-pink-200');
+            });
+
+            // Apply highlights
+            data.treeHighlight.forEach(node => {
+                document.getElementById(node).classList.add('bg-pink-100', 'px-1.5', 'rounded-md', 'border', 'border-pink-200');
+            });
 
             lucide.createIcons();
 
+            // Button disabled states
             document.getElementById('b1-prev-btn').disabled = (b1CurrentStep === 1);
             document.getElementById('b1-next-btn').disabled = (b1CurrentStep === b1TotalSteps);
 
@@ -910,7 +1016,7 @@
         }
 
 
-        // Tác vụ 2: Academic Sources Assessment data
+        // Tác vụ 2: Academic Sources data
         const docAssessmentData = {
             1: {
                 title: "1. Sun, Z. et al. (2021). ChineseBERT",
@@ -1109,7 +1215,7 @@
             gemini: {
                 title: "Giai đoạn 1: Lên ý tưởng & Biên tập nội dung số cùng Google Gemini",
                 prompt: '"Hãy đóng vai là một chuyên gia môi trường... Cung cấp cho tôi 5 số liệu từ nguồn uy tín dạng câu ngắn gọn (không quá 15 từ)..."',
-                desc: "Gemini đã nhanh chóng gợi ý cho mình những con số báo động thực tế (như 8 triệu tấn nhựa trôi ra biển hàng năm). <br><br><strong>Chỉnh sửa thủ công:</strong> Mình đã tự đối chiếu chéo (fact-check) lại các con số này trên trang chủ WWF, đồng thời tự dịch và điều chỉnh lại câu cú tiếng Việt cho mượt mà, xúc động và tự nhiên nhất."
+                desc: "Gemini đã nhanh chóng gợi ý cho mình những con số báo động thực tế (như 8 triệu tấn nhựa trôi ra biển hàng năm). <br><br><strong>Chỉnh sửa thủ công:</strong> Mình đã tự đối chiếu chéo (fact-check) lại các con số này trên trang chủ WWF, đồng thời tự dịch và điều chỉnh lại câu cú tiếng Việt cho mượt mà, xúc động hơn."
             },
             dalle: {
                 title: "Giai đoạn 2: Sáng tạo chất liệu hình ảnh cùng DALL-E 3",
@@ -1173,14 +1279,14 @@
             });
         }
 
-        // Initialize state syncing on DOM load
+        // Initialize state on page load
         window.addEventListener('DOMContentLoaded', () => {
-            stepB1(0); // Sync Task 1 to Step 1 on page load
-            assessDoc(1);
-            selectT3Task(1);
-            selectT4Tool('monday');
-            selectT5Stage('gemini');
-            selectT6Details('compare');
+            stepB1(0); // init b1 explorer
+            assessDoc(1); // init doc evaluation
+            selectT3Task(1); // init t3 comparison
+            selectT4Tool('monday'); // init t4 tool
+            selectT5Stage('gemini'); // init t5 stages
+            selectT6Details('compare'); // init t6 academic policy
         });
     </script>
 </body>
