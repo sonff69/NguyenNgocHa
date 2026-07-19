@@ -50,7 +50,7 @@
             position: relative;
             font-family: 'Be Vietnam Pro', sans-serif;
         }
-        /* Style matches the soft glowing stars in the sample images */
+        /* Style aligns with the soft glowing stars in the sample images */
         .glowing-star {
             filter: drop-shadow(0 0 10px rgba(255, 182, 193, 0.9));
             pointer-events: none;
@@ -199,7 +199,7 @@
                         Định Hình Thói Quen Học Lành Mạnh
                     </h4>
                     <p class="text-gray-500 leading-relaxed text-xs">
-                        Xây dựng một góc nhìn liêm chính trong học tập, biết cách biến AI thành một người bạn đồng hành hữu ích thay vị lạm dụng nó một cách rập khuôn.
+                        Xây dựng một góc nhìn liêm chính trong học tập, biết cách biến AI thành một người bạn đồng hành hữu ích thay vì lạm dụng nó một cách rập khuôn.
                     </p>
                 </div>
             </div>
@@ -221,7 +221,7 @@
                 <div class="md:col-span-5 flex flex-col justify-between dreamy-glass p-8 rounded-3xl border-2 border-white/60 dreamy-card-hover">
                     <div class="space-y-4">
                         <div class="w-12 h-12 rounded-2xl bg-pink-100 flex items-center justify-center text-dreamPink-400 font-bold text-lg">01</div>
-                        <h3 class="text-base md:text-lg font-bold text-gray-800">Bài 1 - Bài tập 1 của mục 1.4: Thao tác cơ bản với tệp tin và thư mục</h3>
+                        <h3 class="text-lg font-bold text-gray-800">Bài 1 - Bài tập 1 của mục 1.4: Thao tác cơ bản với tệp tin và thư mục</h3>
                         <p class="text-gray-600 text-xs leading-relaxed">
                             <strong>Mục tiêu của mình:</strong> Rèn luyện kỹ năng sử dụng máy tính căn bản nhất, học cách sắp xếp thư mục ngăn nắp bằng Windows File Explorer và làm quen với các phím tắt nhanh để quản lý dữ liệu nhanh chóng.
                         </p>
@@ -250,19 +250,30 @@
                             <p id="b1-text" class="text-gray-700 leading-relaxed font-medium">Bước 1: Mở File Explorer bằng phím tắt Windows + E hoặc nhấp chuột vào biểu tượng thư mục màu vàng trên màn hình.</p>
                         </div>
 
-                        <!-- Dynamic Directory Tree Visualizer (Flawless JS Renderer) -->
-                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-200/50 font-mono text-[11px] text-gray-600 space-y-1.5 min-h-[140px] flex flex-col justify-center" id="tree-root-container">
-                            <!-- Programmatically rendered on mount & update to prevent freeze -->
+                        <!-- Dynamic Directory Tree Visualizer -->
+                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-200/50 font-mono text-[11px] text-gray-600 space-y-1.5 min-h-[140px] flex flex-col justify-center">
+                            <div class="flex items-center gap-1 text-gray-800 font-bold"><i data-lucide="hard-drive" class="w-3.5 h-3.5 text-dreamPink-400"></i> D:\ (Máy tính của mình)</div>
+                            <div class="pl-4 border-l border-dashed border-gray-300 space-y-1" id="tree-root">
+                                <div id="tree-folder-main" class="flex items-center gap-1 font-semibold transition-opacity duration-300 opacity-20"><i data-lucide="folder" class="w-3.5 h-3.5 text-dreamPink-300"></i> ThucHanh_NguyenNgocHa</div>
+                                <div class="pl-4 border-l border-dashed border-gray-300 space-y-1 hidden" id="tree-sub-elements">
+                                    <div id="tree-file-gc" class="flex items-center gap-1 transition-all duration-300 hidden"><i data-lucide="file-text" class="w-3 h-3 text-indigo-300"></i> <span id="tree-file-gc-name">GhiChu.txt</span></div>
+                                    <div id="tree-folder-sub" class="flex items-center gap-1 font-semibold transition-all duration-300 hidden"><i data-lucide="folder" class="w-3.5 h-3.5 text-dreamPink-300"></i> TaiLieu</div>
+                                    <div class="pl-4 border-l border-dashed border-gray-300 space-y-1 hidden" id="tree-sub-sub-elements">
+                                        <div id="tree-file-gc-copy" class="flex items-center gap-1 transition-all duration-300 hidden"><i data-lucide="file-text" class="w-3 h-3 text-indigo-300"></i> GhiChuQuanTrong.txt (Bản sao lưu)</div>
+                                        <div id="tree-file-dc" class="flex items-center gap-1 transition-all duration-300 hidden"><i data-lucide="file-text" class="w-3 h-3 text-indigo-300"></i> DiChuyen.txt</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="flex justify-between items-center pt-4 border-t border-gray-100 mt-4">
                         <button id="b1-prev-btn" onclick="stepB1(-1)" class="text-xs font-bold text-gray-300 flex items-center gap-1 cursor-not-allowed" disabled>
-                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M15 19l-7-7 7-7"></path></svg> Quay lại
+                            <i data-lucide="chevron-left" class="w-4 h-4"></i> Quay lại
                         </button>
                         <span id="b1-indicator" class="text-xs text-gray-500 font-bold">Bước 1 / 12</span>
                         <button id="b1-next-btn" onclick="stepB1(1)" class="text-xs font-bold text-dreamPink-400 hover:text-dreamPink-500 flex items-center gap-1 cursor-pointer transition-colors">
-                            Tiếp theo <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M9 5l7 7-7 7"></path></svg>
+                            Tiếp theo <i data-lucide="chevron-right" class="w-4 h-4"></i>
                         </button>
                     </div>
                 </div>
@@ -735,128 +746,134 @@
         animateSparkles();
 
 
-        // Tác vụ 1: Sơ đồ cây thư mục & 12 bước mô phỏng (Hàm kết xuất tự động cực kỳ mượt mà)
+        // Tác vụ 1: Sơ đồ cây thư mục & 12 bước mô phỏng
         let b1CurrentStep = 1;
         const b1TotalSteps = 12;
 
         const b1StepsData = {
             1: {
                 text: "Bước 1: Mở File Explorer bằng phím tắt Windows + E hoặc nhấp chuột vào biểu tượng thư mục màu vàng trên thanh Taskbar nhanh chóng.",
-                visual: '<svg class="w-10 h-10 text-dreamPink-400 mx-auto animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg><p class="font-bold text-gray-800 text-[11px] mt-2">Màn hình máy tính của mình</p><p class="text-[10px] text-gray-400">File Explorer sẵn sàng hoạt động</p>'
+                visual: '<i data-lucide="monitor" class="w-10 h-10 text-dreamPink-400 mx-auto animate-pulse"></i><p class="font-bold text-gray-800 text-[11px]">Màn hình máy tính</p><p class="text-[10px] text-gray-400">File Explorer sẵn sàng hoạt động</p>'
             },
             2: {
                 text: "Bước 2: Ở cột bên trái giao diện, nhấp chuột chọn This PC, sau đó nhấp đúp vào ổ đĩa D: để mở phân vùng không gian lưu trữ hệ thống.",
-                visual: '<svg class="w-10 h-10 text-dreamPink-400 mx-auto animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg><p class="font-bold text-gray-800 text-[11px] mt-2">This PC > Ổ đĩa D:</p><p class="text-[10px] text-gray-400">Đã đi vào không gian lưu trữ chính</p>'
+                visual: '<i data-lucide="hard-drive" class="w-10 h-10 text-dreamPink-400 mx-auto animate-bounce"></i><p class="font-bold text-gray-800 text-[11px]">This PC > Ổ đĩa D:</p><p class="text-[10px] text-gray-400">Đã đi vào không gian lưu trữ chính</p>'
             },
             3: {
                 text: "Bước 3: Nhấp chuột phải vào khoảng trống bất kỳ -> chọn New -> Folder. Tiến hành đặt tên cho thư mục mới là ThucHanh_NguyenNgocHa rồi nhấn Enter.",
-                visual: '<svg class="w-10 h-10 text-dreamPink-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path></svg><p class="font-bold text-gray-800 text-[11px] mt-2">[D:\\ThucHanh_NguyenNgocHa]</p><p class="text-[10px] text-gray-400">Tạo thành công thư mục thực hành cá nhân</p>'
+                visual: '<i data-lucide="folder-plus" class="w-10 h-10 text-dreamPink-400 mx-auto"></i><p class="font-bold text-gray-800 text-[11px]">[D:\\ThucHanh_NguyenNgocHa]</p><p class="text-[10px] text-gray-400">Tạo thành công thư mục thực hành cá nhân</p>'
             },
             4: {
                 text: "Bước 4: Nhấp đúp chuột vào thư mục ThucHanh_NguyenNgocHa vừa tạo để bắt đầu đi vào bên trong thư mục này.",
-                visual: '<svg class="w-10 h-10 text-dreamPink-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5M5 19a2 2 0 002 2h14a2 2 0 002-2v-5M17 14l2-2 2 2"></path></svg><p class="font-bold text-gray-800 text-[11px] mt-2">Thư mục đang trống</p><p class="text-[10px] text-gray-400">Chuẩn bị khởi tạo tệp tin văn bản</p>'
+                visual: '<i data-lucide="folder-open" class="w-10 h-10 text-dreamPink-400 mx-auto"></i><p class="font-bold text-gray-800 text-[11px]">Thư mục đang trống</p><p class="text-[10px] text-gray-400">Chuẩn bị khởi tạo tệp tin văn bản</p>'
             },
             5: {
                 text: "Bước 5: Nhấp chuột phải vào khoảng trống bên trong -> chọn New -> Text Document. Đặt tên tệp tin ban đầu là GhiChu.txt rồi nhấn Enter.",
-                visual: '<svg class="w-10 h-10 text-dreamPink-400 mx-auto animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg><p class="font-bold text-gray-800 text-[11px] mt-2">GhiChu.txt (0 KB)</p><p class="text-[10px] text-gray-400">Đã khởi tạo tệp tin ghi chú ban đầu</p>'
+                visual: '<i data-lucide="file-plus-2" class="w-10 h-10 text-dreamPink-400 mx-auto animate-pulse"></i><p class="font-bold text-gray-800 text-[11px]">GhiChu.txt (0 KB)</p><p class="text-[10px] text-gray-400">Đã khởi tạo tệp tin ghi chú ban đầu</p>'
             },
             6: {
                 text: "Bước 6: Nhấp chuột phải vào tệp GhiChu.txt vừa tạo -> chọn Rename. Đổi tên tệp văn bản thành GhiChuQuanTrong.txt rồi nhấn Enter.",
-                visual: '<svg class="w-10 h-10 text-dreamPink-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg><p class="font-bold text-gray-800 text-[11px] mt-2">GhiChuQuanTrong.txt</p><p class="text-[10px] text-gray-400">Đã hoàn thành việc đổi tên tệp</p>'
+                visual: '<i data-lucide="edit-3" class="w-10 h-10 text-dreamPink-400 mx-auto"></i><p class="font-bold text-gray-800 text-[11px]">GhiChuQuanTrong.txt</p><p class="text-[10px] text-gray-400">Đã hoàn thành việc đổi tên tệp</p>'
             },
             7: {
                 text: "Bước 7: Nhấp chuột phải vào khoảng trống bất kỳ -> chọn New -> Folder. Đặt tên cho thư mục con mới này là TaiLieu rồi nhấn Enter.",
-                visual: '<svg class="w-10 h-10 text-dreamPink-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path></svg><p class="font-bold text-gray-800 text-[11px] mt-2">Đã xuất hiện thư mục con [TaiLieu]</p><p class="text-[10px] text-gray-400">Chuẩn bị chuyển dữ liệu phân vùng</p>'
+                visual: '<i data-lucide="folder" class="w-10 h-10 text-dreamPink-400 mx-auto"></i><p class="font-bold text-gray-800 text-[11px]">Đã xuất hiện thư mục con [TaiLieu]</p><p class="text-[10px] text-gray-400">Chuẩn bị chuyển dữ liệu phân vùng</p>'
             },
             8: {
                 text: "Bước 8: Nhấp chuột phải vào tệp GhiChuQuanTrong.txt -> chọn Copy (hoặc dùng phím tắt Ctrl + C). Nhấp đúp mở thư mục con TaiLieu -> nhấp chuột phải -> chọn Paste (Ctrl + V) để tạo bản sao lưu.",
-                visual: '<div class="flex gap-3 justify-center items-center"><svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"></path></svg><svg class="w-5 h-5 text-dreamPink-400 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"></path></svg><svg class="w-8 h-8 text-dreamPink-400" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"></path></svg></div><p class="font-bold text-gray-800 text-[11px] mt-2">TaiLieu\\GhiChuQuanTrong.txt</p><p class="text-[10px] text-gray-400">Bản sao của tệp đã được dán thành công</p>'
+                visual: '<div class="flex gap-3 justify-center items-center"><i data-lucide="file-text" class="w-6 h-6 text-gray-400"></i><i data-lucide="copy" class="w-5 h-5 text-dreamPink-400 animate-bounce"></i><i data-lucide="folder-open" class="w-8 h-8 text-dreamPink-400"></i></div><p class="font-bold text-gray-800 text-[11px]">TaiLieu\\GhiChuQuanTrong.txt</p><p class="text-[10px] text-gray-400">Bản sao của tệp đã được dán thành công</p>'
             },
             9: {
                 text: "Bước 9: Quay lại thư mục gốc ThucHanh_NguyenNgocHa. Nhấp chuột phải -> New -> Text Document -> đặt tên DiChuyen.txt. Nhấp chuột phải vào tệp mới -> chọn Cut (Ctrl + X). Đi vào thư mục TaiLieu -> Paste (Ctrl + V) để chuyển hẳn tệp.",
-                visual: '<div class="flex gap-3 justify-center items-center"><svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"></path></svg><svg class="w-5 h-5 text-dreamPink-400 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M14.121 14.121L19 19m-4.879-4.879L21 12M12 21a9 9 0 110-18 9 9 0 010 18z"></path></svg><svg class="w-8 h-8 text-dreamPink-400" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"></path></svg></div><p class="font-bold text-gray-800 text-[11px] mt-2">Tệp DiChuyen.txt đã di dời</p><p class="text-[10px] text-gray-400">Tệp gốc đã di chuyển hoàn toàn vào thư mục con</p>'
+                visual: '<div class="flex gap-3 justify-center items-center"><i data-lucide="file-check-2" class="w-6 h-6 text-gray-400"></i><i data-lucide="scissors" class="w-5 h-5 text-dreamPink-400 animate-pulse"></i><i data-lucide="folder" class="w-8 h-8 text-dreamPink-400"></i></div><p class="font-bold text-gray-800 text-[11px]">Tệp DiChuyen.txt đã di dời</p><p class="text-[10px] text-gray-400">Tệp gốc đã di chuyển hoàn toàn vào thư mục con</p>'
             },
             10: {
                 text: "Bước 10: Đi vào thư mục con TaiLieu, nhấp chuột phải vào tệp sao lưu GhiChuQuanTrong.txt -> chọn Delete (hoặc phím Delete) để chuyển tệp vào Thùng rác (Recycle Bin) tạm thời.",
-                visual: '<svg class="w-10 h-10 text-dreamPink-400 mx-auto animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg><p class="font-bold text-gray-800 text-[11px] mt-2">Xóa GhiChuQuanTrong.txt</p><p class="text-[10px] text-gray-400">Tệp đã bị xóa và nằm tạm trong Thùng rác</p>'
+                visual: '<i data-lucide="trash-2" class="w-10 h-10 text-dreamPink-400 mx-auto animate-bounce"></i><p class="font-bold text-gray-800 text-[11px]">Xóa GhiChuQuanTrong.txt</p><p class="text-[10px] text-gray-400">Tệp đã bị xóa và nằm tạm trong Thùng rác</p>'
             },
             11: {
                 text: "Bước 11: Nhấp chuột chọn tệp DiChuyen.txt, nhấn giữ tổ hợp phím Shift và nhấn phím Delete. Một cảnh báo hiện ra, nhấp chọn Yes để xóa tệp vĩnh viễn không qua thùng rác.",
-                visual: '<svg class="w-10 h-10 text-red-400 mx-auto animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg><p class="font-bold text-gray-800 text-[11px] mt-2">Xóa vĩnh viễn tệp DiChuyen.txt</p><p class="text-[10px] text-red-400">Cảnh báo: Tệp này không thể phục hồi!</p>'
+                visual: '<i data-lucide="alert-triangle" class="w-10 h-10 text-red-400 mx-auto animate-pulse"></i><p class="font-bold text-gray-800 text-[11px]">Xóa vĩnh viễn tệp DiChuyen.txt</p><p class="text-[10px] text-red-400">Cảnh báo: Tệp này không thể phục hồi!</p>'
             },
             12: {
                 text: "Bước 12: Quay lại màn hình chính Desktop, nhấp đúp biểu tượng Recycle Bin. Tìm tệp GhiChuQuanTrong.txt đã xóa -> nhấp chuột phải -> chọn Restore để khôi phục tệp về thư mục TaiLieu ban đầu.",
-                visual: '<svg class="w-10 h-10 text-green-400 mx-auto animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8.21M12 8v4l3 3"></path></svg><p class="font-bold text-gray-800 text-[11px] mt-2">Khôi phục thành công!</p><p class="text-[10px] text-gray-400">Tệp tin đã phục hồi về lại vị trí cũ</p>'
+                visual: '<i data-lucide="rotate-ccw" class="w-10 h-10 text-green-400 mx-auto animate-bounce"></i><p class="font-bold text-gray-800 text-[11px]">Khôi phục thành công!</p><p class="text-[10px] text-gray-400">Tệp tin đã phục hồi về lại vị trí cũ</p>'
             }
         };
 
-        // Fully functional dynamic folder tree renderer
-        function renderTree(step) {
-            let html = '';
-            // Root drive D
-            html += `<div class="flex items-center gap-1.5 font-bold text-gray-800"><svg class="w-4 h-4 text-dreamPink-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg> D:\\ (Máy tính của mình)</div>`;
-            
-            html += `<div class="pl-4 border-l border-dashed border-gray-300 space-y-1.5 mt-1.5">`;
-            
-            // Main folder: ThucHanh_NguyenNgocHa
+        function updateTreeUI(step) {
+            const mainFolder = document.getElementById('tree-folder-main');
+            const subElements = document.getElementById('tree-sub-elements');
+            const fileGc = document.getElementById('tree-file-gc');
+            const fileGcName = document.getElementById('tree-file-gc-name');
+            const folderSub = document.getElementById('tree-folder-sub');
+            const subSubElements = document.getElementById('tree-sub-sub-elements');
+            const fileGcCopy = document.getElementById('tree-file-gc-copy');
+            const fileDc = document.getElementById('tree-file-dc');
+
+            // Reset highlights and styles
+            mainFolder.classList.remove('opacity-20', 'opacity-100', 'bg-pink-100', 'px-1', 'rounded');
+            fileGc.classList.remove('hidden', 'bg-pink-100', 'px-1', 'rounded');
+            folderSub.classList.remove('hidden', 'opacity-20', 'opacity-100', 'bg-pink-100', 'px-1', 'rounded');
+            fileGcCopy.classList.remove('hidden', 'bg-pink-100', 'px-1', 'rounded');
+            fileDc.classList.remove('hidden', 'bg-pink-100', 'px-1', 'rounded');
+
+            // Apply state based on step
             if (step >= 3) {
-                let activeClass = (step === 3 || step === 4) ? 'bg-pink-100 px-1.5 py-0.5 rounded text-dreamPink-600 font-semibold' : 'text-gray-800 font-semibold';
-                let folderIcon = (step >= 4) ? 
-                    `<svg class="w-4 h-4 text-dreamPink-400 shrink-0 inline" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"></path></svg>` : 
-                    `<svg class="w-4 h-4 text-dreamPink-300 shrink-0 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>`;
-                
-                html += `<div class="flex items-center gap-1.5 ${activeClass}">${folderIcon} ThucHanh_NguyenNgocHa</div>`;
-                
-                // Sub elements inside main folder
-                if (step >= 4) {
-                    html += `<div class="pl-4 border-l border-dashed border-gray-300 space-y-1.5 mt-1.5">`;
-                    
-                    // GhiChu.txt or GhiChuQuanTrong.txt in root
-                    if (step >= 5) {
-                        let gcName = (step >= 6) ? "GhiChuQuanTrong.txt" : "GhiChu.txt";
-                        let activeClassGc = (step === 5 || step === 6) ? 'bg-pink-100 px-1.5 py-0.5 rounded text-indigo-600 font-medium' : 'text-gray-600';
-                        html += `<div class="flex items-center gap-1.5 ${activeClassGc}"><svg class="w-3.5 h-3.5 text-indigo-400 shrink-0 inline" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"></path></svg> ${gcName}</div>`;
-                    }
-                    
-                    // TaiLieu Subfolder
-                    if (step >= 7) {
-                        let activeClassSub = (step === 7) ? 'bg-pink-100 px-1.5 py-0.5 rounded text-dreamPink-600 font-semibold' : 'text-gray-800 font-semibold';
-                        html += `<div class="flex items-center gap-1.5 ${activeClassSub}"><svg class="w-4 h-4 text-dreamPink-400 shrink-0 inline" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"></path></svg> TaiLieu</div>`;
-                        
-                        // Inside TaiLieu subfolder
-                        if (step >= 8) {
-                            html += `<div class="pl-4 border-l border-dashed border-gray-300 space-y-1.5 mt-1.5">`;
-                            
-                            // GhiChuQuanTrong.txt copy (deleted in step 10, restored in step 12)
-                            if (step === 8 || step === 9 || step === 12) {
-                                let activeClassCopy = (step === 8 || step === 12) ? 'bg-pink-100 px-1.5 py-0.5 rounded text-indigo-600 font-medium animate-pulse' : 'text-gray-600';
-                                html += `<div class="flex items-center gap-1.5 ${activeClassCopy}"><svg class="w-3.5 h-3.5 text-indigo-400 shrink-0 inline" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"></path></svg> GhiChuQuanTrong.txt (Bản sao)</div>`;
-                            } else if (step === 10 || step === 11) {
-                                // Deleted state (strike through style)
-                                html += `<div class="flex items-center gap-1.5 text-gray-300 line-through"><svg class="w-3.5 h-3.5 text-gray-200 shrink-0 inline" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"></path></svg> GhiChuQuanTrong.txt (Đã xóa)</div>`;
-                            }
-                            
-                            // DiChuyen.txt (created/moved in step 9, permanently deleted in step 11)
-                            if (step === 9 || step === 10) {
-                                let activeClassDc = (step === 9) ? 'bg-pink-100 px-1.5 py-0.5 rounded text-indigo-600 font-medium' : 'text-gray-600';
-                                html += `<div class="flex items-center gap-1.5 ${activeClassDc}"><svg class="w-3.5 h-3.5 text-indigo-400 shrink-0 inline" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"></path></svg> DiChuyen.txt</div>`;
-                            } else if (step === 11) {
-                                html += `<div class="flex items-center gap-1.5 text-red-300 line-through"><svg class="w-3.5 h-3.5 text-red-200 shrink-0 inline" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"></path></svg> DiChuyen.txt (Xóa vĩnh viễn)</div>`;
-                            }
-                            
-                            html += `</div>`;
-                        }
-                    }
-                    
-                    html += `</div>`;
+                mainFolder.classList.add('opacity-100');
+            } else {
+                mainFolder.classList.add('opacity-20');
+            }
+
+            if (step >= 4) {
+                subElements.classList.remove('hidden');
+            } else {
+                subElements.classList.add('hidden');
+            }
+
+            if (step >= 5) {
+                fileGc.classList.remove('hidden');
+                if (step === 5) {
+                    fileGcName.textContent = "GhiChu.txt";
+                } else {
+                    fileGcName.textContent = "GhiChuQuanTrong.txt";
                 }
             } else {
-                html += `<div class="flex items-center gap-1.5 text-gray-300 italic"><svg class="w-4 h-4 text-gray-200 shrink-0 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg> (Trống - Chưa tạo thư mục gốc)</div>`;
+                fileGc.classList.add('hidden');
             }
-            
-            html += `</div>`;
-            
-            document.getElementById('tree-root-container').innerHTML = html;
+
+            if (step >= 7) {
+                folderSub.classList.remove('hidden');
+                folderSub.classList.add('opacity-100');
+            } else {
+                folderSub.classList.add('hidden');
+                folderSub.classList.add('opacity-20');
+            }
+
+            if (step >= 8) {
+                subSubElements.classList.remove('hidden');
+            } else {
+                subSubElements.classList.add('hidden');
+            }
+
+            if (step >= 8 && step !== 10 && step !== 11) {
+                fileGcCopy.classList.remove('hidden');
+            } else {
+                fileGcCopy.classList.add('hidden');
+            }
+
+            if (step >= 9 && step !== 11 && step !== 12) {
+                fileDc.classList.remove('hidden');
+            } else {
+                fileDc.classList.add('hidden');
+            }
+
+            // Highlights
+            if (step === 3 || step === 4) mainFolder.classList.add('bg-pink-100', 'px-1', 'rounded');
+            if (step === 5 || step === 6) fileGc.classList.add('bg-pink-100', 'px-1', 'rounded');
+            if (step === 7) folderSub.classList.add('bg-pink-100', 'px-1', 'rounded');
+            if (step === 8 || step === 10 || step === 12) fileGcCopy.classList.add('bg-pink-100', 'px-1', 'rounded');
+            if (step === 9 || step === 11) fileDc.classList.add('bg-pink-100', 'px-1', 'rounded');
         }
 
         function stepB1(direction) {
@@ -871,8 +888,8 @@
             
             document.getElementById('step-visual-display').innerHTML = data.visual;
 
-            // Trigger the programmatic tree layout refresh
-            renderTree(b1CurrentStep);
+            // Trigger dynamic Tree visual transitions
+            updateTreeUI(b1CurrentStep);
 
             lucide.createIcons();
 
@@ -892,9 +909,278 @@
             }
         }
 
-        // Run render initially on page load
+
+        // Tác vụ 2: Academic Sources Assessment data
+        const docAssessmentData = {
+            1: {
+                title: "1. Sun, Z. et al. (2021). ChineseBERT",
+                author: "Nhóm nghiên cứu chuyên AI / arXiv",
+                method: "Thực nghiệm với mô hình học sâu",
+                citations: "Cao",
+                recency: "Mới (2021)",
+                rating: "★★★★★",
+                eval: "Đánh giá của mình: Đây là một tài liệu rất đáng tin cậy. Nghiên cứu mang tính đột phá khi giải quyết bài toán ngữ nghĩa bằng cách tích hợp cả thông tin hình dáng chữ và phiên âm Hán ngữ vào máy tính."
+            },
+            2: {
+                title: "2. Devlin, J. et al. (2019). BERT",
+                author: "Nhóm nghiên cứu Google / Hội nghị NAACL",
+                method: "Thực nghiệm học sâu trên dữ liệu khổng lồ",
+                citations: "Cực kỳ cao (Nền tảng kỷ nguyên)",
+                recency: "Tương đối mới (2019)",
+                rating: "★★★★★",
+                eval: "Đánh giá của mình: Độ tin cậy tối cao. Đây là nghiên cứu cột mốc khai sinh ra kỷ nguyên mô hình biến đổi hai chiều (Transformers) trong xử lý ngôn ngữ tự nhiên, là bệ phóng lý thuyết giúp đối chiếu cấu trúc ngữ pháp sang ngôn ngữ máy."
+            },
+            3: {
+                title: "3. Cui, Y. et al. (2021). Whole Word Masking for Chinese BERT",
+                author: "Nhóm nghiên cứu NLP chuyên sâu / ACL & arXiv",
+                method: "Thực nghiệm học sâu nâng cao",
+                citations: "Cao",
+                recency: "Mới (2021)",
+                rating: "★★★★★",
+                eval: "Đánh giá của mình: Đáng tin cậy cao. Khắc phục thành công hạn chế phân tách từ vựng (Word Segmentation) bằng giải pháp che toàn bộ từ thay vì từng ký tự đơn lẻ khi huấn luyện mô hình BERT cho tiếng Trung."
+            },
+            4: {
+                title: "4. Xue, N. (2003). Chinese Word Segmentation as Character Tagging",
+                author: "Nhà nghiên cứu ngôn ngữ học hàng đầu / Tạp chí Computational Linguistics",
+                method: "Phân tích cấu trúc lý thuyết & Thực nghiệm thuật toán",
+                citations: "Rất cao (Kinh điển)",
+                recency: "Cũ nhưng có giá trị nền móng vững bền",
+                rating: "★★★★☆",
+                eval: "Đánh giá của mình: Mang tính chất cột mốc học thuật. Đặt nền móng chuyển hóa cấu tạo từ vựng tiếng Trung Hán ngữ thành bài toán dán nhãn ký tự nhị phân giúp máy tính nhận diện từ ghép chính xác."
+            },
+            5: {
+                title: "5. Meng, Y. et al. (2019). ERNIE",
+                author: "Nhóm nghiên cứu AI Baidu / arXiv",
+                method: "Thực nghiệm tích hợp tri thức xã hội",
+                citations: "Cao",
+                recency: "Mới (2019)",
+                rating: "★★★★★",
+                eval: "Đánh giá của mình: Đáng tin cậy, ứng dụng công nghệ cao. Mô hình ERNIE cải thiện đáng kể năng lực xử lý cú pháp tiếng Trung nhờ nhúng trực tiếp các thực thể thực tiễn và tri thức bối cảnh vào quá trình tiền huấn luyện."
+            },
+            6: {
+                title: "6. Journal of Chinese Linguistics (JCL)",
+                author: "Nhiều học giả uy tín / Chinese University Press",
+                method: "Phản biện khoa học mù đôi (Peer-review)",
+                citations: "Rất cao",
+                recency: "Cập nhật liên tục",
+                rating: "★★★★★",
+                eval: "Đánh giá của mình: Độ tin cậy tuyệt đối. Đây là tạp chí đầu ngành thế giới chuyên sâu về ngôn ngữ học Hán ngữ, nơi các lý thuyết ngữ âm, cú pháp học hiện đại được thẩm định nghiêm ngặt nhất."
+            },
+            7: {
+                title: "7. Studies in Chinese Linguistics (SCL)",
+                author: "Các nhà nghiên cứu quốc tế / De Gruyter",
+                method: "Phản biện khoa học nghiêm ngặt",
+                citations: "Cao",
+                recency: "Liên tục",
+                rating: "★★★★★",
+                eval: "Đánh giá của mình: Độ tin cậy cao. Tập trung công bố các nghiên cứu lý thuyết ngữ pháp tiếng Trung đương đại dưới góc độ cấu trúc hệ thống và ngôn ngữ học tạo sinh."
+            },
+            8: {
+                title: "8. Tạp chí Zhongguo Yuwen",
+                author: "Các chuyên gia ngôn ngữ học hàng đầu / Viện KHXH Trung Quốc",
+                method: "Nghiên cứu học thuật lý luận",
+                citations: "Rất cao",
+                recency: "Liên tục",
+                rating: "★★★★★",
+                eval: "Đánh giá của mình: Nguồn học thuật tối cao tại Trung Quốc đại lục. Toàn bộ hệ thống ngữ pháp Hán ngữ hiện đại và Hán ngữ cổ đại được quy chuẩn hóa từ các công bố danh giá của tạp chí này."
+            },
+            9: {
+                title: "9. Li, C.N. & Thompson, S.A. (1981). Mandarin Chinese Grammar",
+                author: "Charles Li & Sandra Thompson / University of California Press",
+                method: "Phân tích cấu trúc chức năng hệ thống",
+                citations: "Cực kỳ cao (Sách gối đầu giường)",
+                recency: "Kinh điển vượt thời gian",
+                rating: "★★★★★",
+                eval: "Đánh giá của mình: Độ tin cậy tuyệt đối. Cuốn sách là cẩm nang phân tích cấu trúc cú pháp tiếng Trung chuẩn mực nhất dưới lăng kính chức năng hệ thống ngôn ngữ, cực kỳ thích hợp cho người học nghiên cứu bản chất câu."
+            },
+            10: {
+                title: "10. Wikipedia - Chinese Language (Nguồn mở)",
+                author: "Cộng đồng biên tập viên internet tự do",
+                method: "Tổng hợp thông tin đại chúng",
+                citations: "Thấp",
+                recency: "Cập nhật hàng giờ",
+                rating: "★★☆☆☆",
+                eval: "Đánh giá của mình: Chỉ dùng để tham khảo ban đầu. Ưu điểm là cập nhật nhanh các định nghĩa đại cương nhưng không có quy trình phản biện khoa học, dễ bị thay đổi nội dung nên bắt buộc phải kiểm chứng lại bằng sách chuyên khảo của UC Press."
+            }
+        };
+
+        function assessDoc(id) {
+            const data = docAssessmentData[id];
+            document.getElementById('doc-title').textContent = data.title;
+            document.getElementById('doc-author').textContent = data.author;
+            document.getElementById('doc-method').textContent = data.method;
+            document.getElementById('doc-citations').textContent = data.citations;
+            document.getElementById('doc-recency').textContent = data.recency;
+            document.getElementById('doc-rating').textContent = data.rating;
+            document.getElementById('doc-eval').textContent = data.eval;
+
+            for (let i = 1; i <= 10; i++) {
+                const element = document.getElementById(`doc-btn-${i}`);
+                if (i === id) {
+                    element.className = "p-1.5 rounded-lg border text-[10px] font-bold transition-all cursor-pointer border-dreamPink-300 bg-dreamPink-50/50 text-dreamPink-500";
+                } else {
+                    element.className = "p-1.5 rounded-lg border text-[10px] font-bold transition-all cursor-pointer border-gray-200 text-gray-500 hover:bg-gray-50";
+                }
+            }
+        }
+
+
+        // Tác vụ 3: Side-by-Side Prompt Comparison Data
+        const t3TasksCompareData = {
+            1: { // Summary
+                basicPrompt: `"Tóm tắt bài đọc sau đây về Mạng thần kinh nhân tạo: [Dán đoạn văn bản]"`,
+                basicResp: "Mạng thần kinh nhân tạo (ANN) là một mô hình toán học phỏng sinh học để xử lý thông tin tự động thông qua các lớp đầu vào, lớp ẩn và lớp đầu ra nhằm bắt chước cấu trúc não người. Các mạng phổ biến gồm MLP, CNN, RNN.",
+                advPrompt: `"Bạn là một giáo sư ngành Khoa học máy tính có khả năng cô đọng kiến thức xuất sắc. Hãy đọc đoạn văn bản sau về Mạng thần kinh nhân tạo và thực hiện tóm tắt theo các bước:\nBước 1: Xác định luận điểm chính và các thuật ngữ cốt lõi.\nBước 2: Trích xuất 3-4 luận cứ hỗ trợ.\nBước 3: Viết bản tóm tắt gồm: (1) Tổng quan 1 câu và (2) Điểm nhấn quan trọng."`,
+                advResp: "[BƯỚC 1: XÁC ĐỊNH]\n- Thuật ngữ: ANN, Trọng số, Backpropagation, Gradient Descent.\n\n[BƯỚC 2: TRÍCH XUẤT]\n- Khởi tạo neuron phỏng sinh học.\n- Thuật toán cập nhật trọng số giảm thiểu sai số.\n\n[BƯỚC 3: TÓM TẮT]\n(1) Tổng quan: ANN là nền tảng cốt lõi của Deep Learning giúp máy tính tự động hóa việc trích đặc trưng từ dữ liệu phức tạp.\n(2) Điểm nhấn: Cấu trúc lớp phi tuyến; Backpropagation là chìa khóa tự động sửa sai số."
+            },
+            2: { // Explaining Backpropagation
+                basicPrompt: `"Giải thích cách hoạt động của Lan truyền ngược (Backpropagation)."`,
+                basicResp: "Lan truyền ngược là thuật toán huấn luyện mạng thần kinh nhân tạo. Hoạt động bằng cách tính đạo hàm của hàm mất mát đối với các trọng số trong mạng rồi dùng Gradient Descent để cập nhật các trọng số nhằm giảm thiểu sai số đầu ra.",
+                advPrompt: `"Bạn là một chuyên gia AI giải thích các khái niệm kỹ thuật phức tạp cho người mới bắt đầu (Explain Like I'm 5). Xem ví dụ giải thích Overfitting: [Ví dụ học vẹt]... Hãy giải thích khái niệm 'Lan truyền ngược' theo phong cách tương tự. Cấu trúc gồm: 1. Câu chuyện ẩn dụ; 2. Giải thích kỹ thuật đơn giản; 3. Tại sao nó quan trọng."`,
+                advResp: "1. Ẩn dụ (Ném bóng rổ):\nBạn ném bóng lệch sang phải và quá cao. Bạn tự nhủ: 'Mình đã dùng lực tay phải mạnh quá'. Lần sau, bạn điều chỉnh lực nhẹ hơn và hướng sang trái một chút. Sau nhiều lần ném bóng sẽ chuẩn xác vào rổ.\n\n2. Kỹ thuật đơn giản:\nKhi AI đoán sai kết quả đầu ra, thuật toán Backpropagation đi ngược từ đầu sai lỗi quay về các lớp neuron ẩn bên trong để tính toán xem bộ phận nào chịu trách nhiệm chính gây sai số bằng toán học Đạo hàm (Gradient).\n\n3. Tại sao quan trọng:\nKhông có nó, AI sẽ mãi đoán mò. Nó là chiếc la bàn sửa sai liên tục cho máy tính."
+            },
+            3: { // JSON exam design
+                basicPrompt: `"Tạo câu hỏi trắc nghiệm về Mạng thần kinh nhân tạo."`,
+                basicResp: "ANN là viết tắt của từ gì?\nA. Artificial Neural Network\nB. Automated Network Node\nC. Algorithm Network\nĐáp án đúng: A.",
+                advPrompt: `"Bạn là chuyên gia khảo thí đại học. Hãy thiết kế bộ câu hỏi ôn tập gồm 3 câu trắc nghiệm (độ khó tăng dần từ Nhận biết, Thông hiểu đến Vận dụng) về 'Hàm kích hoạt' trong ANN. Định dạng đầu ra nghiêm ngặt theo cấu trúc JSON: [ { 'level': '...', 'question': '...', 'options': {'A': '...', 'B': '...'}, 'correct_answer': '...', 'explanation': '...' } ]"`,
+                advResp: "[\n  {\n    \"level\": \"Nhận biết\",\n    \"question\": \"Vai trò chính của hàm kích hoạt là gì?\",\n    \"options\": {\"A\": \"Lưu trữ dữ liệu\", \"B\": \"Tạo tính phi tuyến\", \"C\": \"Tăng kích thước đầu vào\"},\n    \"correct_answer\": \"B\",\n    \"explanation\": \"Giúp mạng xử lý các mối liên hệ phi tuyến phức tạp.\"\n  },\n  {\n    \"level\": \"Thông hiểu\",\n    \"question\": \"Tại sao dùng ReLU?\",\n    \"options\": {\"A\": \"Giới hạn 0-1\", \"B\": \"Tính toán đơn giản, chống triệt tiêu gradient\"},\n    \"correct_answer\": \"B\",\n    \"explanation\": \"Công thức f(x)=max(0,x) giúp tính toán cực nhanh.\"\n  }\n]"
+            }
+        };
+
+        function selectT3Task(id) {
+            const data = t3TasksCompareData[id];
+            document.getElementById('t3-basic-prompt').textContent = data.basicPrompt;
+            document.getElementById('t3-basic-response').textContent = data.basicResp;
+            document.getElementById('t3-adv-prompt').textContent = data.advPrompt;
+            document.getElementById('t3-adv-response').textContent = data.advResp;
+
+            for (let i = 1; i <= 3; i++) {
+                const element = document.getElementById(`t3-task-${i}`);
+                if (i === id) {
+                    element.className = "p-2 rounded-xl border text-[11px] font-bold transition-all cursor-pointer border-dreamPink-300 bg-dreamPink-50/50 text-dreamPink-500";
+                } else {
+                    element.className = "p-2 rounded-xl border text-[11px] font-bold transition-all cursor-pointer border-gray-200 text-gray-500 hover:bg-gray-50";
+                }
+            }
+        }
+
+
+        // Tác vụ 4: Online Team Collaboration Tools Detail Logic
+        const t4ToolsData = {
+            monday: {
+                title: "Monday.com - Trung tâm quản trị & điều phối tiến độ trực quan",
+                desc: "Được thiết lập làm 'bản doanh' cho Nhóm 3 môn Công nghệ số. Với chủ đề 'Thiết kế video Chỉnh sửa gen bằng AI', Monday.com giúp nhóm trực quan hóa sơ đồ phân công cụ thể: Phóng to slide mở đầu, Biên tập video thô, Lồng phụ đề và giọng thuyết minh. <br><br><strong>Hạn chế vận hành:</strong> Giao diện tương đối phức tạp đối với thành viên mới làm quen, một số tính năng biểu đồ gantt chuyên sâu bị khóa ở phiên bản Free."
+            },
+            gdocs: {
+                title: "Google Docs - Đồng biên tập kịch bản thuyết trình thời gian thực",
+                desc: "Đồng tác giả kịch bản thoại với các chủ đề nhánh như: 'Trí tuệ nhân tạo là gì?', 'Ứng dụng AI trong Biên phiên dịch'. Google Docs thể hiện ưu thế vượt trội khi cho phép 6 thành viên trong nhóm cùng chỉnh sửa văn phong, nhận xét phản hồi trực tiếp để tối ưu hóa kịch bản trong vài phút. <br><br><strong>Hạn chế:</strong> Phụ thuộc tuyệt đối vào kết nối mạng internet."
+            },
+            gdrive: {
+                title: "Google Drive - Đồng bộ tài nguyên & Quản lý thư viện số",
+                desc: "Thư mục lưu trữ đám mây của Nhóm 3 (NMCNS) ghi nhận sự đóng góp tài nguyên nén bao gồm các tệp tin video biên tập thô và bản hoàn chỉnh: <code>cuoiiiiiiiiiiiiii.mp4</code> (133.6 MB), <code>thuyete 1.mp4</code> (251.4 MB) và <code>thuyet trinh 2.mp4</code> (120.5 MB). <br><br><strong>Hạn chế:</strong> Nếu không quy hoạch phân vùng thư mục ngay từ đầu, không gian lưu trữ rất dễ bị lộn xộn, rơi vào quá tải."
+            },
+            gmeet: {
+                title: "Google Meet - Tổ chức thảo luận chiến lược ảo hiệu quả",
+                desc: "Tổ chức hai cuộc họp chiến lược tối quan trọng: <br>- <strong>Ngày 01/06/2026:</strong> Thảo luận thống nhất đề tài, phác thảo đề cương kịch bản thoại video.<br>- <strong>Ngày 14/06/2026:</strong> Rà soát sản phẩm video cuối cùng trước khi nộp báo cáo lớn. <br><br>Ghi nhận sự tham gia của 6 thành viên tích cực: Châu Hà, Ngọc Hà, Thảo Vy (Đạo diễn trình bày), Thu Hằng, Vũ Mai Ngọc."
+            }
+        };
+
+        function selectT4Tool(key) {
+            const data = t4ToolsData[key];
+            document.getElementById('t4-tool-title').innerHTML = `<i data-lucide="activity" class="w-4 h-4 text-dreamPink-400"></i> ${data.title}`;
+            document.getElementById('t4-tool-desc').innerHTML = data.desc;
+
+            lucide.createIcons();
+
+            const tools = ['monday', 'gdocs', 'gdrive', 'gmeet'];
+            tools.forEach(t => {
+                const element = document.getElementById(`t4-tool-${t}`);
+                if (t === key) {
+                    element.className = "p-2 rounded-xl border text-[11px] font-bold transition-all cursor-pointer border-dreamPink-300 bg-dreamPink-50/50 text-dreamPink-500";
+                } else {
+                    element.className = "p-2 rounded-xl border text-[11px] font-bold transition-all cursor-pointer border-gray-200 text-gray-500 hover:bg-gray-50";
+                }
+            });
+        }
+
+
+        // Tác vụ 5: Generative AI Multimedia Design Stages Logic
+        const t5StagesData = {
+            gemini: {
+                title: "Giai đoạn 1: Lên ý tưởng & Biên tập nội dung số cùng Google Gemini",
+                prompt: '"Hãy đóng vai là một chuyên gia môi trường... Cung cấp cho tôi 5 số liệu từ nguồn uy tín dạng câu ngắn gọn (không quá 15 từ)..."',
+                desc: "Gemini đã nhanh chóng gợi ý cho mình những con số báo động thực tế (như 8 triệu tấn nhựa trôi ra biển hàng năm). <br><br><strong>Chỉnh sửa thủ công:</strong> Mình đã tự đối chiếu chéo (fact-check) lại các con số này trên trang chủ WWF, đồng thời tự dịch và điều chỉnh lại câu cú tiếng Việt cho mượt mà, xúc động và tự nhiên nhất."
+            },
+            dalle: {
+                title: "Giai đoạn 2: Sáng tạo chất liệu hình ảnh cùng DALL-E 3",
+                prompt: '"A powerful conceptual 2D vector illustration of a majestic whale swimming in the ocean, but its body transitionally turns into plastic bottles and trash. Split screen effect..."',
+                desc: "Bức hình DALL-E 3 sinh ra ban đầu có một số chi tiết nilon và vỏ chai nhựa bị biến dạng trông hơi kỳ cục trên nền màu trắng tinh. <br><br><strong>Sửa đổi thủ công:</strong> Để khắc phục, mình đã chủ động đưa tấm ảnh này vào phần mềm thiết kế chuyên dụng để tẩy sạch những phần lỗi, chỉ giữ lại vóc dáng sắc nét của chú cá voi trước khi đưa vào Canva."
+            },
+            canva: {
+                title: "Giai đoạn 3: Bố cục trực quan & Thiết kế cùng Canva AI",
+                prompt: '"Infographic về môi trường biển và rác thải nhựa, phong cách hiện đại, tối giản"',
+                desc: "Giao diện layout gợi ý mặc định bị lỗi font chữ tiếng Việt nghiêm trọng (đặc biệt là lỗi vỡ dấu hiển thị). <br><br><strong>Căn chỉnh của mình:</strong> Mình đã tự căn chỉnh thủ công toàn bộ khối văn bản, đổi phông chữ sang cặp Montserrat và League Spartan. Đồng thời phóng to tệp số liệu điểm nhấn '8 TRIỆU TẤN' để kích thích người đọc hành động vì môi trường."
+            }
+        };
+
+        function selectT5Stage(key) {
+            const data = t5StagesData[key];
+            document.getElementById('t5-stage-title').textContent = data.title;
+            document.getElementById('t5-stage-prompt').textContent = data.prompt;
+            document.getElementById('t5-stage-desc').innerHTML = data.desc;
+
+            const stages = ['gemini', 'dalle', 'canva'];
+            stages.forEach(s => {
+                const element = document.getElementById(`t5-stage-${s}`);
+                if (s === key) {
+                    element.className = "p-2 rounded-xl border text-[11px] font-bold transition-all cursor-pointer border-dreamPink-300 bg-dreamPink-50/50 text-dreamPink-500";
+                } else {
+                    element.className = "p-2 rounded-xl border text-[11px] font-bold transition-all cursor-pointer border-gray-200 text-gray-500 hover:bg-gray-50";
+                }
+            });
+        }
+
+
+        // Tác vụ 6: Academic AI Ethics & Manifesto Modes Logic
+        const t6DataOptions = {
+            compare: {
+                title: "1. So sánh chi tiết chính sách quản lý Generative AI (VNU vs HUST)",
+                desc: "<strong>Đại học Quốc gia Hà Nội (VNU):</strong> Quản lý khung năng lực tổng quát, kiểm soát đầu ra bằng quy định liêm chính học thuật chung để chống đạo văn. Sử dụng hệ thống Turnitin quét mức độ can thiệp của AI. Đề cao trách nhiệm giải trình của cá nhân đối với lỗi ảo giác (hallucination) của AI.<br><br><strong>Đại học Bách khoa Hà Nội (HUST):</strong> Chú trọng sâu vào kỹ thuật thực thi cho các khối ngành công nghệ. Kiểm tra chặt chẽ mã nguồn (source code) tự động sinh của AI và sử dụng các hội đồng đánh giá vấn đáp trực tiếp để xác định năng lực thực tế."
+            },
+            journal: {
+                title: "2. Nhật ký viết luận học thuật: Mạng xã hội & Deep Work của Gen Z",
+                desc: "<strong>Quy trình viết luận 3 bước nghiêm ngặt:</strong><br>- <strong>Bước 1 (Lọc cấu trúc):</strong> Chủ động loại bỏ các giải pháp vĩ mô không thực tế của AI để tập trung sâu vào kỹ năng 'kỷ luật số' cá nhân.<br>- <strong>Bước 2 (Xác thực học thuật):</strong> Khi AI đề cập lý thuyết Cognitive Load (John Sweller 1988), mình đã tự truy cập Google Scholar đọc trực tiếp bản gốc, viết lại định nghĩa bằng văn phong của mình.<br>- <strong>Bước 3 (Bản địa hóa dữ liệu):</strong> Tích hợp số liệu báo cáo Internet thực tế của người trẻ Việt Nam từ báo cáo uy tín của We Are Social để tăng tính thuyết phục thực tế cho lập luận."
+            },
+            manifesto: {
+                title: "3. Tuyên ngôn 6 nguyên tắc cốt lõi sử dụng AI có trách nhiệm",
+                desc: "1. <strong>Chủ thể tư duy:</strong> Tôi luôn là tác giả, kiểm soát và chịu trách nhiệm 100% về mọi thông tin, lập luận nộp cho giảng viên. AI không phải tác giả, nó chỉ là trợ lý hỗ trợ.<br>2. <strong>Động não trước:</strong> Luôn brainstorm tự lực 15 phút trước khi hỏi AI để không bị thuật toán dẫn dắt tư duy ban đầu.<br>3. <strong>Xác thực độc lập:</strong> Coi mọi câu trả lời của AI chỉ là giả thuyết, luôn kiểm chứng chéo với tài liệu chính thống.<br>4. <strong>Minh bạch tuyệt đối:</strong> Công khai rõ ràng vị trí và công cụ AI đã hỗ trợ tại mục Phụ lục.<br>5. <strong>Bảo mật thông tin:</strong> Tuyệt đối không upload thông tin cá nhân, tài liệu nội bộ chưa công bố của nhà trường lên AI công cộng.<br>6. <strong>Tập trung bản chất:</strong> Sử dụng AI để đào sâu kiến thức bằng câu hỏi 'Tại sao', không bao giờ xem AI là lối tắt để làm bài tập đối phó."
+            }
+        };
+
+        function selectT6Details(key) {
+            const data = t6DataOptions[key];
+            document.getElementById('t6-mode-title').innerHTML = data.title;
+            document.getElementById('t6-mode-desc').innerHTML = data.desc;
+
+            const modes = ['compare', 'journal', 'manifesto'];
+            modes.forEach(m => {
+                const element = document.getElementById(`t6-tab-${m}`);
+                if (m === key) {
+                    element.className = "p-2 rounded-xl border text-[11px] font-bold transition-all cursor-pointer border-dreamPink-300 bg-dreamPink-50/50 text-dreamPink-500";
+                } else {
+                    element.className = "p-2 rounded-xl border text-[11px] font-bold transition-all cursor-pointer border-gray-200 text-gray-500 hover:bg-gray-50";
+                }
+            });
+        }
+
+        // Initialize state syncing on DOM load
         window.addEventListener('DOMContentLoaded', () => {
-            stepB1(0);
+            stepB1(0); // Sync Task 1 to Step 1 on page load
+            assessDoc(1);
+            selectT3Task(1);
+            selectT4Tool('monday');
+            selectT5Stage('gemini');
+            selectT6Details('compare');
         });
     </script>
 </body>
